@@ -23,6 +23,8 @@ Blogging website made for educational purposes.
 7)	Footer: A footer that contains relevant links, along with a contact form that users can use to contact the website admin for any queries.
 8)	Home Button: It is located at the top left portion and we can use this button to check the timeline where we can view the contents published by everyone.
 
+
+
 ![arch](https://user-images.githubusercontent.com/66082800/153078361-92480dbc-b8a5-4e54-992c-5450ae397503.png)
 
 
