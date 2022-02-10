@@ -8,12 +8,12 @@
     padding: 0px;
     margin: 0px;
     background: #fff;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', serif;
   }
   
   p,
   span {
-    font-family: 'montserrat';
+    font-family: 'Poppins';
     font-weight: 400;
     color: #ffc000;
   }
@@ -24,7 +24,7 @@
   h4,
   h5,
   h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', serif;
     color: #ffc000;
     margin: 5px;
   }
@@ -47,7 +47,7 @@
     border: 1px solid transparent;
     border-radius: 0.25rem;
     font-size: 1.08em;
-    font-family: 'Lora', serif;
+    font-family: 'Poppins', serif;
   }
   
   .btn-big {
@@ -70,7 +70,7 @@
     color: #444;
     line-height: 1.5rem;
     font-size: 1.2em;
-    font-family: 'Lora', serif;
+    font-family: 'Poppins', serif;
   }
   
   .msg {
@@ -521,7 +521,7 @@
   .footer .footer-content .contact-form .contact-btn {
     float: right;
     font-size: 1.1em;
-    font-family: 'Lora', serif;
+    font-family: 'Poppins', serif;
   }
   
   .footer .footer-bottom {
