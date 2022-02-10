@@ -15,7 +15,7 @@
   span {
     font-family: 'Poppins';
     font-weight: 400;
-    color: #ffc000;
+    color: #5486af;
   }
   
   h1,
@@ -25,7 +25,7 @@
   h5,
   h6 {
     font-family: 'Poppins', serif;
-    color: #ffc000;
+    color: #5486af;
     margin: 5px;
   }
   
@@ -42,7 +42,7 @@
   
   .btn {
     padding: 0.5rem 1rem;
-    background: rgba(253, 207, 67, 0.2);
+    background: #5486af;
     color: #656565;
     border: 1px solid transparent;
     border-radius: 0.25rem;
@@ -56,8 +56,7 @@
   }
   
   .btn:hover {
-    color: #656565 !important;
-    background: rgba(253, 207, 67, 0.5);
+    background: #5486af31;
   }
   
   .text-input {
@@ -98,7 +97,7 @@
   header {
     background: white;
     height: 66px;
-    border-bottom: 1px solid #ffc000;
+    border-bottom: 1px solid #5486af;
   }
   
   header * {
@@ -112,7 +111,7 @@
   }
   
   header .logo-text {
-    color: #ffc000;
+    color: #5486af;
     font-family: 'Cinzel' sans-serif;
     margin: 9px;
   }
@@ -144,6 +143,7 @@
   
   header ul li:hover ul {
     display: block;
+    color: white;
   }
   
   header ul li ul li {
@@ -161,7 +161,8 @@
   }
   
   header ul li ul li a:hover {
-    background: rgba(253, 207, 67, 0.2);
+    background: #5486af;
+    color: #fff;
   }
   
   header ul li a {
@@ -173,9 +174,11 @@
   }
   
   header ul li a:hover {
-    background: rgba(253, 207, 67, 0.2);
-    color: #ffc000;
+    background: #5486af;
+    color: #5486af;
     transition: 0.3s;
+    color: #fff;
+
   }
   
   header .menu-toggle {
@@ -187,13 +190,13 @@
   }
   
   .page-wrapper a:hover {
-    color: #BE8F00;
+    color: #a5c2c2;
   }
   
   /* POST SLIDER */
   
   .post {
-    border-bottom: 1px solid #ffc000;
+    border-bottom: 1px solid #5486af;
   }
   
   .post-slider {
@@ -210,13 +213,13 @@
     top: 50%;
     right: 30px;
     font-size: 2em;
-    color: #ffc000;
+    color: #5486af;
     cursor: pointer;
   }
   
   .post-slider .next:hover,
   .post-slider .prev:hover {
-    background: rgba(253, 207, 67, 0.2);
+    background: #5486af;
     transition: 0.3s;
   }
   
@@ -225,7 +228,7 @@
     top: 50%;
     left: 30px;
     font-size: 2em;
-    color: #ffc000;
+    color: #5486af;
     cursor: pointer;
   }
   
@@ -258,7 +261,7 @@
   }
   
   .post-info {
-    color: #ffc000;
+    color: #5486af;
   }
   
   .post-info i:first-of-type {
@@ -326,6 +329,10 @@
     color: #757575;
     font-size: 0.8em;
   }
+
+  .date{
+    font-family: 'Poppins', serif;
+  }
   
   .content .main-content .post .preview-text {
     line-height: 1.5em;
@@ -339,12 +346,12 @@
     right: 10px;
     background: transparent;
     border-radius: 0px;
-    color: #FFC000 !important;
+    color: #5486af !important;
   }
   
   .content .main-content .post .read-more:hover {
-    background: rgba(253, 207, 67, 0.2);
-    color: #FFC000 !important;
+    background: #5486af;
+    color: #5486af !important;
     transition: 0.25s;
   }
   
@@ -437,8 +444,8 @@
   /* FOOTER */
   
   .footer {
-    background: rgba(253, 207, 67, 0.2);
-    color: #FFC000;
+    background: #5486af31;
+    color: #5486af;
     height: 400px;
     position: relative;
   }
@@ -457,7 +464,7 @@
   
   .footer .footer-content h1,
   .footer .footer-content h2 {
-    color: #ffc000;
+    color: #5486af;
   }
   
   
@@ -487,8 +494,8 @@
   }
   
   .footer .footer-content .about .socials a:hover {
-    border: 1px solid #ffc000;;
-    color: #ffc000;
+    border: 1px solid #5486af;;
+    color: #5486af;
     transition: all 0.3s;
   }
   
@@ -506,22 +513,34 @@
   }
   
   .footer .footer-content .contact-form .contact-input {
-    background: rgba(253, 207, 67, 0.2);
-    color: #656565;
+    background: #5486af;
     margin-bottom: 10px;
     line-height: 1.5rem;
     padding: 0.9rem 1.4rem;
     border: none;
   }
+
+  .contact::-webkit-input-placeholder{
+    color: white;
+  }
+
+  .login-btn{
+    color: white;
+    cursor: pointer;
+  }
+
+  
   
   .footer .footer-content .contact-form .contact-input:focus {
-    background: rgba(253, 207, 67, 0.5);
+    background: #5486af63;
+    color: white;
   }
   
   .footer .footer-content .contact-form .contact-btn {
     float: right;
     font-size: 1.1em;
     font-family: 'Poppins', serif;
+    color: white;
   }
   
   .footer .footer-bottom {
@@ -635,7 +654,7 @@
     }
   
     header ul li ul li a:hover {
-      background: #BE8F00;
+      background: #a5c2c2;
     }
   
     header ul li ul li a.logout {
