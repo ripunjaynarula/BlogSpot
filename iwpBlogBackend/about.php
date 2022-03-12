@@ -30,9 +30,9 @@
     <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
     <p style="color: black; font-size: 30px; text-align: center; width: 80%; margin: auto; padding: 40px;">Blogging Website made as the J component project for CSE3002, Internet and Web Programming, using PHP and MySQLi.</p>
     <p style="color: black; font-size: 20px; text-align: center;">Group: <br></p>
-    <p style="color: black; font-size: 15px; text-align: center;">Apoorva Srivastava (19BCE2138) <br></p>
-    <p style="color: black; font-size: 15px; text-align: center;">Sudhanshu Agarwal (19BCE2203) <br></p>
-    <p style="color: black; font-size: 15px; text-align: center; padding-bottom:60px;">Namrata Singhal (19BCE0643) <br></p>
+    <p style="color: black; font-size: 15px; text-align: center;">Ripunjay Narula (19BCE0470) <br></p>
+    <p style="color: black; font-size: 15px; text-align: center;">Samvit Swaminathan (19BCE0629) <br></p>
+    <p style="color: black; font-size: 15px; text-align: center; padding-bottom:60px;">Sri Sailusha Pendyala (19BCE2445) <br></p>
     <?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
 </body>
 </html>
