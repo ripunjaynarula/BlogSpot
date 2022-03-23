@@ -2,7 +2,7 @@
 
 $host = 'localhost';
 $user = 'root';
-$pass = 'soulreaper';
+$pass = '';
 $db_name = 'iwpBlog';
 
 $conn = new MySQLi($host,$user,$pass,$db_name);
