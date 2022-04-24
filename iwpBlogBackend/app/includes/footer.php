@@ -2,13 +2,13 @@
     <div class="footer-content">
 
       <div class="footer-section about">
-        <h1 class="logo-text">BlogSquare</h1>
+        <h1 class="logo-text">BlogSpot</h1>
         <p>
-          BlogSquare is a fictional blog conceived for the purpose of IWP Project.
+          BlogSpot is a fictional blog conceived for the purpose of IWP Project.
         </p>
         <div class="contact">
           <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
-          <span><i class="fas fa-envelope"></i> &nbsp; apoorvasrivastava.14@gmail.com</span>
+          <span><i class="fas fa-envelope"></i> &nbsp; ripunjaynarula30@gmail.com</span>
         </div>
         <div class="socials">
           <a href="https://www.google.com/"><i class="fab fa-facebook"></i></a>
@@ -47,6 +47,6 @@
     </div>
 
     <div class="footer-bottom">
-      &copy; Designed by Apoorva Srivastava
+      &copy; Designed by Samvit Swaminathan
     </div>
   </div>

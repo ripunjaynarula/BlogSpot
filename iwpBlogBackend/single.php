@@ -63,7 +63,7 @@
         <div class="fb-page" data-href="https://www.facebook.com/vituniversity" data-small-header="false"
           data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
           <blockquote cite="https://www.facebook.com/vituniversity" class="fb-xfbml-parse-ignore"><a
-              href="https://www.facebook.com/vituniversity">Apoorva Srivastava</a></blockquote>
+              href="https://www.facebook.com/vituniversity">Ripunjay Narula</a></blockquote>
         </div>
 
 
