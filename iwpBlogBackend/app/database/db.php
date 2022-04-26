@@ -16,10 +16,13 @@ function executeQuery($sql, $data)
 {
     global $conn;
     $stmt = $conn->prepare($sql);
-    $values = array_values($data);
-    $types = str_repeat('s', count($values));
-    $stmt->bind_param($types, ...$values);
-    $stmt->execute();
+    if($stmt){
+        $values = array_values($data);
+        $types = str_repeat('s', count($values));
+        $stmt->bind_param($types, ...$values);
+        $stmt->execute();
+    }
+    
     return $stmt;
 }
 
@@ -128,8 +131,11 @@ function delete($table, $id)
 function getPublishedPosts(){
     global $conn;
     $sql = "SELECT p.*, u.username FROM posts AS p JOIN user AS u on p.user_id=u.id WHERE p.published=?";
+    // $sql = "SELECT * FROM users"
     $stmt = executeQuery($sql, ['published' => 1]);
+    if($stmt){
     $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    }
     return $records;
 }
 
