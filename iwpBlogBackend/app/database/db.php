@@ -16,13 +16,13 @@ function executeQuery($sql, $data)
 {
     global $conn;
     $stmt = $conn->prepare($sql);
-    if($stmt){
+    if ($stmt) {
         $values = array_values($data);
         $types = str_repeat('s', count($values));
         $stmt->bind_param($types, ...$values);
         $stmt->execute();
     }
-    
+
     return $stmt;
 }
 
@@ -33,9 +33,13 @@ function selectAll($table, $conditions = [])
     $sql = "SELECT * FROM $table";
     if (empty($conditions)) {
         $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
-        return $records;
+        if ($stmt) {
+            $stmt->execute();
+            $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+            return $records;
+        }
+
+        
     } else {
         $i = 0;
         foreach ($conditions as $key => $value) {
@@ -46,7 +50,7 @@ function selectAll($table, $conditions = [])
             }
             $i++;
         }
-        
+
         $stmt = executeQuery($sql, $conditions);
         $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         return $records;
@@ -70,8 +74,10 @@ function selectOne($table, $conditions)
 
     $sql = $sql . " LIMIT 1";
     $stmt = executeQuery($sql, $conditions);
+    if($stmt){
     $records = $stmt->get_result()->fetch_assoc();
     return $records;
+    }
 }
 
 
@@ -89,7 +95,7 @@ function create($table, $data)
         }
         $i++;
     }
-    
+
     $stmt = executeQuery($sql, $data);
     $id = $stmt->insert_id;
     return $id;
@@ -128,18 +134,20 @@ function delete($table, $id)
     return $stmt->affected_rows;
 }
 
-function getPublishedPosts(){
+function getPublishedPosts()
+{
     global $conn;
     $sql = "SELECT p.*, u.username FROM posts AS p JOIN user AS u on p.user_id=u.id WHERE p.published=?";
     // $sql = "SELECT * FROM users"
     $stmt = executeQuery($sql, ['published' => 1]);
-    if($stmt){
-    $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    if ($stmt) {
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     }
     return $records;
 }
 
-function getPostsByTopicId($topic_id){
+function getPostsByTopicId($topic_id)
+{
     global $conn;
     $sql = "SELECT p.*, u.username FROM posts AS p JOIN user AS u on p.user_id=u.id WHERE p.published=? AND topic_id=?";
     $stmt = executeQuery($sql, ['published' => 1, 'topic_id' => $topic_id]);
@@ -147,11 +155,12 @@ function getPostsByTopicId($topic_id){
     return $records;
 }
 
-function searchPosts($term){
+function searchPosts($term)
+{
     $match = '%' . $term . '%';
     global $conn;
     $sql = "SELECT p.*, u.username FROM posts AS p JOIN user AS u on p.user_id=u.id WHERE p.published=? AND p.title LIKE ? OR p.body LIKE ?";
-    $stmt = executeQuery($sql, ['published' => 1, 'title' => $match, 'body'=>$match]);
+    $stmt = executeQuery($sql, ['published' => 1, 'title' => $match, 'body' => $match]);
     $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     return $records;
 }
@@ -160,4 +169,3 @@ function searchPosts($term){
 //     global $conn;
 //     $sql = "SELEC"
 // }
-
